@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stock Predictions </title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- bootstrap 3.0.2 -->
+        <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="../../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body class="skin-blue">
+        <!-- header logo: style can be found in header.less -->
+        <header class="header">
+            <a href="../../index.html" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                Warren Buffet
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                
+            </nav>
+        </header>
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <i class="fa fa-th"></i> <span>Live Stream</span> 
+                            </a>
+                        </li>
+						<li>
+                            <a href="/myaccount">
+                                <i class="fa fa-user"></i> <span>My Account</span> 
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Right side column. Contains the navbar and content of the page -->
+            <aside class="right-side">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        My Account
+                        
+                    </h1>
+                   
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+                    <!-- row -->
+                    <div class="row">     
+						
+						<div class="col-md-5">
+						<div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Add to watch list</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <input class="form-control" placeholder="Symbol" type="text">
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <input class="form-control" placeholder="Quantity" type="text">
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-body -->
+                            </div>
+							</div>
+						
+						<div class="col-md-10">
+                            <!-- general form elements -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Watch List</h3>
+                                </div><!-- /.box-header -->
+								
+                        <div class="table-responsive">
+                                        <!-- .table - Uses sparkline charts-->
+                                        <table class="table table-striped datastream">
+                                            
+                                            <tr><th>Symbol</th><th>Quantity</th> <th>Status</th></tr>
+                                            <tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">GOOG</a></td><td class="lask">10</td><td class="rec "><a class="btn-success btn-xs">Enabled</a></td></tr>
+											<tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">APPL</a></td><td class="lask">5</td><td class="rec "><a class="btn-success btn-xs">Enabled</a></td></tr>
+											<tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">MSFT</a></td><td class="lask">100</td><td class="rec "><a class="btn-success btn-xs">Enabled</a></td></tr>
+                                        </table><!-- /.table -->
+                                    </div>
+							</div>
+						</div>
+						
+						<div class="col-md-10">
+                            <!-- general form elements -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Portfolio</h3>
+                                </div><!-- /.box-header -->
+								
+                        <div class="table-responsive">
+                                        <!-- .table - Uses sparkline charts-->
+                                        <table class="table table-striped datastream">
+                                            
+                                            <tr><th>Symbol</th><th>Quantity</th> <th>Date</th> <th>Buy Price</th> <th>Current Price</th> <th>Total Savings</th></tr>
+											<tr><th><a href="#" class="symbol">GOOG</a></th><th>10</th> <th>05/20/2015</th> <th>530.11</th> <th>535.21</th> <th>160</th></tr>
+											<tr><th><a href="#" class="symbol">APPL</a></th><th>5</th> <th>05/20/2015</th> <th>150.11</th> <th>160</th> <th>50</th></tr>
+<!--
+                                            <tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">GOOG</a></td><td class="lask">10</td><td class="rec "><a class="btn-success btn-xs">Enabled</a></td></tr>
+											<tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">APPL</a></td><td class="lask">5</td><td class="rec "><a class="btn-success btn-xs">Enabled</a></td></tr>
+											<tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">MSFT</a></td><td class="lask">100</td><td class="rec "><a class="btn-success btn-xs">Enabled</a></td></tr>
+-->
+                                        </table><!-- /.table -->
+                                    </div>
+							</div>
+						</div>
+						
+                    </div><!-- /.row -->
+
+                    
+
+                </section><!-- /.content -->
+            </aside><!-- /.right-side -->
+        </div><!-- ./wrapper -->
+
+		<script src="/socket.io/socket.io.js"></script>
+        <script>
+			
+                var socket = io();
+			    socket.on("datastream",function(msg){
+					
+					data = jQuery.parseJSON(msg);
+					ds =$(".datasteam").clone();
+					cl = $(".clone");
+					
+					for(dt in data){
+						console.log($("#"+data[dt][0]).html());
+						if(data[dt][2] == "BUY"){
+							btcolor = "btn btn-success btn-xs";	
+						}else if(data[dt][2] == "SELL"){
+							btcolor = "btn btn-danger btn-xs";
+						}else if(data[dt][2] == "HOLD"){
+							btcolor = "btn btn-warning btn-xs";
+						}
+						if($("#"+data[dt][0]).length == 0){
+							str = '<tr id="'+data[dt][0]+'"><td><a href="#" class="symbol">'+data[dt][0]+'</a></td><td class="lask">'+data[dt][1]+'</td><td class="rec "><a class="'+btcolor+'">'+data[dt][2]+'</a></td></tr>';
+							$(".datastream").append(str);
+							
+						}else{
+							$("#"+data[dt][0]).find(".lask").html(data[dt][1]);
+							$("#"+data[dt][0]).find(".rec").html('<a class="'+btcolor+'">'+data[dt][2]+'</a>');
+							
+						}
+						//$("#"+data[dt][0]).fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100);
+						/*for(i=0;i<3;i++) {
+    						$("#"+data[dt][0]).fadeTo('slow', 0.5).fadeTo('slow', 1.0);
+  						}*/
+						options={};
+							$("#"+data[dt][0]+" td").effect("highlight", options, 2000, function(){
+//								setTimeout(function() {
+//        $( "#"+data[dt][0] ).removeAttr( "style" ).hide().fadeIn();
+//      }, 1000 );
+							});
+						console.log($("#"+data[dt][0]).html())
+					}
+					
+				});
+        </script>
+		
+        <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- AdminLTE App -->
+        <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+		
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+		<script>
+			$(document).ready(function(){
+			  $(".no-print").hide();
+											
+jQuery.fn.flash = function( color, duration )
+{
+    var current = this.css( 'color' );
+    this.animate( { color: 'rgb(' + color + ')' }, duration / 2 );
+    this.animate( { color: current }, duration / 2 );
+}
+//Then use the above function as:
+
+			});
+		</script>
+    </body>
+</html>
