@@ -31,7 +31,7 @@ object Predict{
     val modelBasePath = args(1)
     val postUrlIP = args(2)
  
-     val fullPath="/home/spark/spark-1.3.1-bin-hadoop2.6/"+company+"_ModelPath"
+     val fullPath=modelBasePath+company+"_ModelPath"
      println(fullPath)
      if (Files.exists(Paths.get(fullPath))) {
 

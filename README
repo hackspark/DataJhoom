@@ -1,1 +1,14 @@
+WarrenBuffet - predicts stock movement
+by 
 DataJhoom
+
+src - contains scala code for TwitterStream, Model and Predict components
+script - contains bash cmds to invoke the 3 functionality
+ui - contains web related code for displaying stock recommendations
+
+For every company, a model is created
+data - contains sample format to feed ML Lib 
+APPL.data accumulates <label> List<features> over a sliding window time period and this data is fed to generate/update the model
+APPL_last.data accummulates List<features> over a shorter window and uses the model to predict the label which is sent to the UI
+
+Here label is the classifier used to predict hold/sell/buy
