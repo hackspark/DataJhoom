@@ -86,8 +86,12 @@ object TwitterStream {
         //spit out top n words for each company
         topCounts.foreachRDD(rdd => {
           val topList = rdd.take(args(4).toInt)
-	  company_price2 = Random.nextInt(100)
-	  //val company_price2 = getStockPrice(company)
+	  
+          // use random method when stock market is down
+          // company_price2 = Random.nextInt(100)
+	  
+          // call live price when stock market is up
+          val company_price2 = getStockPrice(company)
 	  if ( company_price1 != 0 && topList.size > 0 ) {
           println("\nPopular topics in last x min (%s total ):".format(rdd.count()))
 	  var tm = TreeMap[Int, String]()
